@@ -12,14 +12,17 @@
 
     <!-- CSS -->
     <link href="main.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
 
-    <!-- Custom styles for this template -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
+    <style>
+        #form {
+        display:none;
+        };
+    </style>
 
   </head>
 
@@ -34,7 +37,7 @@
       </div>
 
     <div id="vidtop-content">
-    <div class="vid-info">
+    <div class="vid-info" style="overflow:scroll; height:60vh">
         <center><h1>Let's take bitcoin to the moon. Literally.</h1></center>
         <p>Let's crowdfund <b>crashing a rocket onto the moon</b>, with a <b>blackbox holding bitcoin private keys</b>.
 
@@ -55,24 +58,32 @@
         </ul>
           <br>
 
-       <a href="/500/Use-YouTube-Videos-as-Fullscreen-Web-Page-Backgrounds">Want to make history? Join the largest grassroots bitcoin PR stunt</a>
-      </div>
+       <!-- <a href="/500/Use-YouTube-Videos-as-Fullscreen-Web-Page-Backgrounds">Want to make history? Join the largest grassroots bitcoin PR stunt</a>
+      </div> -->
+
+      <div align="center">
+        <button id="formButton" align="right" class="button special">Join the Grassroots effort</a><br>
+        </div>
+      <div align="center" id="form"><iframe class="airtable-embed" src="https://airtable.com/embed/shrRDxAEVYUlBqmY2?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                <div align="right"><button id="close" align="right" class="button">Close Window</a></div>
+      </div> 
+
+
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Form Reveal Javascript -->
+    <script>
+        $(document).ready(function() {
+          $("#formButton").click(function() {
+            $("#formButton").hide();
+            $("#form").show();
+          });
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/grayscale.min.js"></script>
-
+          $("#close").click(function() {
+            $("#form").hide();
+            $("#formButton").show();
+          });
+    </script>
   </body>
 
 </html>
